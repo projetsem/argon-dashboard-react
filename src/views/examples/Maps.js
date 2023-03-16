@@ -1,20 +1,4 @@
-/*!
 
-=========================================================
-* Argon Dashboard React - v1.2.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-react
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard-react/blob/master/LICENSE.md)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -28,11 +12,11 @@ const MapWrapper = () => {
   React.useEffect(() => {
     let google = window.google;
     let map = mapRef.current;
-    let lat = "40.748817";
-    let lng = "-73.985428";
+    let lat = "35.8214307";
+    let lng = "10.634422";
     const myLatlng = new google.maps.LatLng(lat, lng);
     const mapOptions = {
-      zoom: 12,
+      zoom: 14,
       center: myLatlng,
       scrollwheel: false,
       zoomControl: true,
@@ -40,7 +24,7 @@ const MapWrapper = () => {
         {
           featureType: "administrative",
           elementType: "labels.text.fill",
-          stylers: [{ color: "#444444" }]
+          stylers: [{ color: "#f7f2f2" }]
         },
         {
           featureType: "landscape",
