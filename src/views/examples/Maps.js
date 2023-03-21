@@ -24,7 +24,7 @@ const MapWrapper = () => {
         {
           featureType: "administrative",
           elementType: "labels.text.fill",
-          stylers: [{ color: "#f7f2f2" }]
+          stylers: [{ color: "" }]
         },
         {
           featureType: "landscape",
@@ -64,18 +64,19 @@ const MapWrapper = () => {
       ]
     };
 
+
     map = new google.maps.Map(map, mapOptions);
 
     const marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
       animation: google.maps.Animation.DROP,
-      title: "Light Bootstrap Dashboard PRO React!"
+      title: "taux gaz"
     });
 
     const contentString =
-      '<div class="info-window-content"><h2>Light Bootstrap Dashboard PRO React</h2>' +
-      "<p>A premium Admin for React-Bootstrap, Bootstrap, React, and React Hooks.</p></div>";
+      '<div class="info-window-content"><h2>Taux de gaz</h2>' +
+      "<p></p></div>";
 
     const infowindow = new google.maps.InfoWindow({
       content: contentString
@@ -87,8 +88,9 @@ const MapWrapper = () => {
   }, []);
   return (
     <>
-      <div
+      <div 
         style={{ height: `600px` }}
+        
         className="map-canvas"
         id="map-canvas"
         ref={mapRef}
@@ -100,7 +102,7 @@ const MapWrapper = () => {
 const Maps = () => {
   return (
     <>
-      <Header />
+      
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>
